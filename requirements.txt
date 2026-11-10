@@ -1,0 +1,23 @@
+definition_version: 2
+entities:
+  Smoothie Orders:
+    type: streamlit
+    meta:
+      use_mixins:
+        - streamlit_shared
+    identifier:
+      name: AOWM05J78RQBGS1D
+      database: SMOOTHIES
+      schema: PUBLIC
+mixins:
+  streamlit_shared:
+    artifacts:
+      - pyproject.toml
+      - streamlit_app.py
+      - .streamlit/config.toml
+    title: Smoothie Orders
+    query_warehouse: COMPUTE_WH
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    meta:
+      role: SYSADMIN
+    main_file: streamlit_app.py
